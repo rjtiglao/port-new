@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import ContentContainer from "../../components/Container/ContentContainer";
+import styled from "styled-components";
+import Logo from "../../assets/img/400x139-logo.png";
 
 // STYLED COMPONENTS
 const WebLogo = styled.img`
@@ -22,6 +24,7 @@ class HomePage extends Component {
   render() {
     return (
       <div>
+        <WebLogo src={Logo}></WebLogo>
         <NavBar />
         <ContentContainer
           marginLeft="400px"
