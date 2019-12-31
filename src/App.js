@@ -13,6 +13,7 @@ import ContactPage from "./views/ContactMe/ContactMe";
 import AboutMePage from "./views/AboutMe/AboutMe";
 import ProjectPage from "./views/Projects/Projects";
 import ClimbPage from "./views/Climb/Climb";
+import LandingPage from "./views/Landing/Landing";
 import FourOhFour from "./views/404/404";
 
 class App extends Component {
@@ -23,7 +24,8 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/" component={MainPage} />
+          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/home" component={MainPage} />
           <Route exact path="/contact" component={ContactPage} />
           <Route exact path="/climb" component={ClimbPage} />
           <Route exact path="/about" component={AboutMePage} />

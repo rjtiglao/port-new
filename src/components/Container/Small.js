@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const ContentContainer = styled.div`
+const SmallContainer = styled.div`
   display: grid;
   grid-template-rows: ${props => props.gridTemplateRows || ""};
   grid-template-columns: ${props => props.gridTemplateColumns || ""};
@@ -25,10 +25,7 @@ const ContentContainer = styled.div`
   overflow: ${props => props.Overflow || ""};
   justify-content: ${props => props.JustifyContent || ""};
   align-content: ${props => props.AlignContent || ""};
-
-  h1 {
-    color: white;
-  }
+  color: ${props => props.Color || ""};
 `;
 
-export default ContentContainer;
+export default SmallContainer;
