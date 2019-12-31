@@ -4,7 +4,7 @@ import styled from "styled-components";
 const NavBar = styled.nav`
   display: grid;
   align-items: center;
-  position: absolute;
+
   z-index: 1;
   overflow-x: hidden;
   color: black;
@@ -37,12 +37,6 @@ const Nav = () => {
   return (
     <NavBar gridRowStart="2">
       <List>
-        <div>
-          <h3>Hi there, I'm</h3>
-          <ul>
-            <h2>Rj Tiglao</h2>
-          </ul>
-        </div>
         <h3>Welcome to my portfolio!</h3>
         <ul>
           <li>

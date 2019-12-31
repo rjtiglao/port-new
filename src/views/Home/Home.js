@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import ContentContainer from "../../components/Container/ContentContainer";
 import styled from "styled-components";
-import Logo from "../../assets/img/400x139-logo.png";
+// import Logo from "../../assets/img/280x140.png";
+import Logo from "../../assets/img/558.82x277.98.png";
 
 // STYLED COMPONENTS
 const WebLogo = styled.img`
@@ -41,7 +42,7 @@ class HomePage extends Component {
           AlignContent="center"
           conPosition="relative"
         >
-          <WebLogo src={Logo}></WebLogo>
+          <WebLogo src={Logo} Width="280px"></WebLogo>
         </ContentContainer>
         <NavBar />
         <ContentContainer
