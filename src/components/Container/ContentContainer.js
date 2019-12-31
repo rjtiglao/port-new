@@ -25,6 +25,7 @@ const ContentContainer = styled.div`
   overflow: ${props => props.Overflow || ""};
   justify-content: ${props => props.JustifyContent || ""};
   align-content: ${props => props.AlignContent || ""};
+  align-items: ${props => props.AlignItems || ""};
 
   h1 {
     color: white;

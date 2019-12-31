@@ -1,17 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "../../assets/img/400x139-logo.png";
 
 const NavBar = styled.nav`
   display: grid;
-  grid-template-rows: 25% 100px auto;
   align-items: center;
   position: absolute;
   z-index: 1;
   overflow-x: hidden;
   color: black;
   transition: 0.5s;
-  height: 100vh;
   width: 100%;
   grid-column-start: ${props => props.gridColumnStart || ""};
   grid-column-end: ${props => props.gridColumnEnd || ""};
@@ -29,34 +26,21 @@ const NavBar = styled.nav`
 const List = styled.ul`
   display: grid;
   grid-row-start: 2;
-  grid-gap: 10px;
+  grid-gap: 15px;
   align-items: center;
   list-style-type: none;
   a {
   }
 `;
-const WebLogo = styled.img`
-  width: ${props => props.Width || ""};
-  height: ${props => props.Height || ""};
-  z-index: ${props => props.zIndex || "-1"};
-  position: absolute;
-  right: ${props => props.Right || ""};
-  bottom: ${props => props.Bottom || ""};
-  left: ${props => props.Left || ""};
-  top: ${props => props.Top || ""};
-  grid-row-start: 1;
-`;
 
 const Nav = () => {
   return (
-    <NavBar>
-      <WebLogo src={Logo}></WebLogo>
-
+    <NavBar gridRowStart="2">
       <List>
         <div>
           <h3>Hi there, I'm</h3>
           <ul>
-            <h1>Rj Tiglao</h1>
+            <h2>Rj Tiglao</h2>
           </ul>
         </div>
         <h3>Welcome to my portfolio!</h3>
