@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Logo from "../../assets/img/400x139-logo.png";
 
 const NavBar = styled.nav`
   display: grid;
@@ -10,8 +11,12 @@ const NavBar = styled.nav`
   overflow-x: hidden;
   color: black;
   transition: 0.5s;
-  width: 400px;
   height: 100vh;
+  width: 100%;
+  grid-column-start: ${props => props.gridColumnStart || ""};
+  grid-column-end: ${props => props.gridColumnEnd || ""};
+  grid-row-start: ${props => props.gridRowStart || ""};
+  grid-row-end: ${props => props.gridRowEnd || ""};
 
   ul {
     display: grid;
@@ -30,11 +35,25 @@ const List = styled.ul`
   a {
   }
 `;
+const WebLogo = styled.img`
+  width: ${props => props.Width || ""};
+  height: ${props => props.Height || ""};
+  z-index: ${props => props.zIndex || "-1"};
+  position: absolute;
+  right: ${props => props.Right || ""};
+  bottom: ${props => props.Bottom || ""};
+  left: ${props => props.Left || ""};
+  top: ${props => props.Top || ""};
+  grid-row-start: 1;
+`;
+
 const Nav = () => {
   return (
     <NavBar>
+      <WebLogo src={Logo}></WebLogo>
+
       <List>
-        <div className="test1">
+        <div>
           <h3>Hi there, I'm</h3>
           <ul>
             <h1>Rj Tiglao</h1>

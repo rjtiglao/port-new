@@ -5,16 +5,6 @@ import styled from "styled-components";
 import Logo from "../../assets/img/400x139-logo.png";
 
 // STYLED COMPONENTS
-const WebLogo = styled.img`
-  width: ${props => props.Width || ""};
-  height: ${props => props.Height || ""};
-  z-index: ${props => props.zIndex || "-1"};
-  position: absolute;
-  right: ${props => props.Right || ""};
-  bottom: ${props => props.Bottom || ""};
-  left: ${props => props.Left || ""};
-  top: ${props => props.Top || ""};
-`;
 
 class HomePage extends Component {
   constructor(props) {
@@ -23,11 +13,10 @@ class HomePage extends Component {
 
   render() {
     return (
-      <div>
-        <WebLogo src={Logo}></WebLogo>
+      <ContentContainer gridTemplateColumns="400px auto" gridTemplateRows="">
         <NavBar />
         <ContentContainer
-          marginLeft="400px"
+          gridColumnStart="2"
           bgHeight="100vh"
           gridTemplateColumns="15% auto 15%"
           gridTemplateRows="15% auto 15%"
@@ -41,7 +30,7 @@ class HomePage extends Component {
             test
           </ContentContainer>
         </ContentContainer>
-      </div>
+      </ContentContainer>
     );
   }
 }
