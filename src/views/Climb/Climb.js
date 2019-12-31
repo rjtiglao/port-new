@@ -1,8 +1,17 @@
 import React, { Component } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import ContentContainer from "../../components/Container/ContentContainer";
+import Climb from "../../assets/img/climb.png";
+import styled from "styled-components";
 
-class AboutMe extends Component {
+const Image = styled.img`
+  max-width: 100%;
+  height: 100vh;
+  z-index: -1;
+  position: absolute;
+`;
+
+class ClimbPage extends Component {
   constructor(props) {
     super(props);
   }
@@ -16,18 +25,13 @@ class AboutMe extends Component {
           bgHeight="100vh"
           gridTemplateColumns="15% auto 15%"
           gridTemplateRows="15% auto 15%"
+          conPosition="relative"
         >
-          <ContentContainer
-            gridColumnStart="2"
-            gridRowStart="2"
-            backgroundColor="yellow"
-          >
-            test
-          </ContentContainer>
+          <Image src={Climb}></Image>
         </ContentContainer>
       </div>
     );
   }
 }
 
-export default AboutMe;
+export default ClimbPage;

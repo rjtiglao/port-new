@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import ContentContainer from "../../components/Container/ContentContainer";
 
-class AboutMe extends Component {
+class HomePage extends Component {
   constructor(props) {
     super(props);
   }
@@ -16,11 +16,12 @@ class AboutMe extends Component {
           bgHeight="100vh"
           gridTemplateColumns="15% auto 15%"
           gridTemplateRows="15% auto 15%"
+          backgroundColor="grey"
         >
           <ContentContainer
             gridColumnStart="2"
             gridRowStart="2"
-            backgroundColor="yellow"
+            backgroundColor="red"
           >
             test
           </ContentContainer>
@@ -30,4 +31,4 @@ class AboutMe extends Component {
   }
 }
 
-export default AboutMe;
+export default HomePage;

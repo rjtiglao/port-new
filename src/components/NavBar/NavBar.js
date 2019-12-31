@@ -7,7 +7,6 @@ const NavBar = styled.nav`
   align-items: center;
   position: absolute;
   z-index: 1;
-  border-right: black solid 1px;
   overflow-x: hidden;
   color: black;
   transition: 0.5s;
@@ -43,10 +42,20 @@ const Nav = () => {
         </div>
         <h3>Welcome to my portfolio!</h3>
         <ul>
-          <li>About Me</li>
-          <li>Projects</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li>
+            <a href="/about">About Me</a>
+          </li>
+          <li>
+            <a href="/projects">Projects</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+          {/*This is the background from where I started to where I am  */}
+          {/* interactive page to the top following the dots */}
+          <li>
+            <a href="/climb">The Climb</a>
+          </li>
         </ul>
       </List>
     </NavBar>
